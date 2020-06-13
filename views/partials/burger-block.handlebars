@@ -1,0 +1,15 @@
+<li>
+	{{burger_name}}
+
+	
+		{{#if devoured}}<span>that was delicious!</span>
+            {{else}}
+                <button 
+                    class="change-devoured" 
+                    data-id="{{id}}" 
+                    data-newdevoured="{{devoured}}">is it time to eat yet?
+                </button>
+        {{/if}}
+	
+
+</li>
