@@ -12,11 +12,11 @@ var burger = {
             callback(res);
         });
     },
-//     update: function(objColVals, condition, cb) {
-//         orm.updateOne("burgers", objColVals, condition, function(res) {
-//         cb(res);
-//     });
-// },
+    update: function(objColVals, condition, callback) {
+        orm.updateOne("burgers", objColVals, condition, function(res) {
+        callback(res);
+    });
+},
 }
 
 

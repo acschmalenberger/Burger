@@ -1,5 +1,27 @@
 body {
     background-color: wheat;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Open Sans Condensed', sans-serif;
+    width: 75%;
+	margin: 0 auto; 
+	display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+button{
+    padding: 3px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    background-color: white;
+}
+
+h1{
+    font-family: 'Amatic SC', cursive;
+    font-size: 70px;
+}
+
+
+
+
 

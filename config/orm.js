@@ -1,3 +1,4 @@
+
 var connection = require("./connection.js");
 
 
@@ -45,6 +46,7 @@ var orm = {
 
     insertOne: function(table, coloumns, values, callback){
         var queryString ="INSERT INTO "+ table;
+        
         queryString += " (";
         queryString += coloumns.toString();
         queryString += ") ";
@@ -57,16 +59,27 @@ var orm = {
         connection.query(queryString, values, function(err,result){
             if (err) throw err;
             console.log(result);
+            callback(result)
         })
     },
 
-//     updateOne: function(){
-//         var queryString ="";
-//         connection.query(queryString,[], function(err,result){
-//             if (err) throw err;
-//             console.log(result);
-//         })
-//     },
+    updateOne: function(table, objColVals, condition, callback){
+        var queryString ="UPDATE "+ table;
+        
+        queryString += " SET ";
+        queryString += objToSql(objColVals);
+        queryString += " WHERE ";
+        queryString += condition;
+        
+        console.log(queryString);
+
+        connection.query(queryString, function(err,result){
+            if (err) {
+                throw err;
+            }
+            callback(result)
+        })
+    },
 }
 
 module.exports = orm;

@@ -2,13 +2,14 @@
 
      * Create a button in `index.handlebars` that will submit the user input into the database. --}}
 <h1>Favorite Burgers!</h1>
+<img src="/assets/img/burger.png" width="400px" id="burgerImg">
 
-<h2>Burgers waiting to be devoured</h2>
+<h2>Is it time to eat this burger yet?</h2>
 
 <ul>
     {{#each burgers}}
         {{#unless this.devoured}}
-            {{> burger-block devoured=false}}
+            {{> burger-block devoured=true}}
         {{/unless}}
     {{/each}}
 </ul>
@@ -18,7 +19,7 @@
 <ul>
     {{#each burgers}}
         {{#if this.devoured}}
-            {{> burger-block devoured=true}}
+            {{> burger-block devoured=false}}
         {{/if}}
     {{/each}}
 </ul>
@@ -35,5 +36,4 @@
 
 <button type="submit">Add Burger</button>
 
-{{!-- action="/api/burgers" method="POST" --}}
 </form>
