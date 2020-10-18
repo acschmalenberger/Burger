@@ -1,7 +1,7 @@
 # **Alyssa's Burger Shack**
 ### https://evening-retreat-75678.herokuapp.com/
 
-![image](./client/public/BurgerScreenShot.png)
+![image](./public/assets/img/BurgerScreenShot.png)
 
 ## **Description:**
 This application demonstrates a simple full stack application with a front end implemented with HTML/CSS and the backend implemented with Node.js and Express. HTML templating is done with the help of Handlebars. 
